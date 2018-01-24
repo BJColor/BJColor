@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+
+int minSdk = 25;
+int targetSdk = 26;
+String appId = 'com.example.xysm.bjcolor';
+int vCode = 1;
+
+android {
+    compileSdkVersion targetSdk
+    defaultConfig {
+        applicationId appId
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode vCode
+        versionName "BJColor" + vCode
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    //签名的配置，debug ，release 这个可以随便取名字，只要对上号就行了singningConfigs.userkey,然后就是那几个签名的密码，在新建签名的时候有几个配置，对照一下就知道填啥了
+    signingConfigs {
+//        debug {
+//            keyPassword 'zhangsan12345678'
+//            storeFile file(getProjectDir().getParent() + '/key_store/platform.keystore')
+////签名文件放在你的电脑哪里
+//            storePassword 'zhangsan12345678'
+//            keyAlias 'zhansan'
+//        }
+//
+//        release {
+//            keyPassword 'lisi12345678'
+//            storeFile file("C:/Users/zhangxiaoya/Desktop/demo.jks")
+//            storePassword 'lisi12345678'
+//            keyAlias '李四'
+//        }
+    }
+
+//配置版本文件
+    buildTypes {
+        debug {
+            //是否启用混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //是否清理无用资源（将删除所有那些在项目中不会使用的资源）
+//            shrinkResources true
+            //是否启用zipAlign压缩
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+        }
+        release {
+            //是否启用混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //是否清理无用资源（将删除所有那些在项目中不会使用的资源）
+//            shrinkResources true
+            //是否启用zipAlign压缩
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+
+        }
+    }
+
+    // 自定义输出配置
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${variant.versionName}.apk"
+//            outputFileName = "${variant.versionName}.apk"
+        }
+    }
+
+    //构建多版本
+    flavorDimensions "keep", "change"
+    productFlavors {
+//        公共的区域
+        banben {
+            dimension "keep"
+            minSdkVersion minSdk
+            applicationId appId
+            targetSdkVersion targetSdk
+            versionCode vCode
+            ndk {
+                moduleName "native-powerctl-jni"
+                abiFilters "armeabi-v7a", "x86"
+                // 指定要ndk需要兼容的架构(这样其他依赖包里mips,armeabi,arm-v8之类的so会被过滤掉)
+            }
+            sourceSets.main {
+                jni.srcDirs = []
+                jniLibs.srcDir 'src/main/libs'
+            }
+            // Enabling multidex support.
+            multiDexEnabled true
+            vectorDrawables.useSupportLibrary = true
+            signingConfig signingConfigs.debug
+        }
+
+
+        One {
+            dimension "change"
+            applicationId "com.example.xysm.bjcolor"
+            resValue "string", "app_name", "app"
+            versionName "one" + vCode
+        }
+        Two {
+            dimension "change"
+            applicationId "com.example.xysm.bjcolor2"
+            resValue "string", "app_name", "app_us"
+            versionName "two" + vCode
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'junit:junit:4.12'
+    implementation 'com.android.support.test:runner:1.0.1'
+    implementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation project(':libhttp')
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    // RxJava
+    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}
+
