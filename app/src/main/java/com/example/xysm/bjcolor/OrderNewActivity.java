@@ -31,46 +31,31 @@ public class OrderNewActivity extends AppCompatActivity {
         findId();
         initData();
         initView();
-
-//        findViewById(R.id.tv_touch).setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View view, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                    Log.i("bjcolor", "--down");
-//                }
-//                if (event.getAction() == MotionEvent.ACTION_MOVE) {
-//                    Log.i("bjcolor", "--move");
-//                }
-//                if (event.getAction() == MotionEvent.ACTION_UP) {
-//                    Log.i("bjcolor", "--up");
-//                }
-//                if (event.getAction() == MotionEvent.ACTION_CANCEL) {
-//                    Log.i("bjcolor", "--cancel");
-//                }
-//                return true;
-//            }
-//        });
     }
 
 
     private void initData() {
-        fragments.add(new ParentTabFragment());
-        fragments.add(new ParentTabFragment());
-        fragments.add(new ParentTabFragment());
+        fragments.add(new ParentTabFragment("新消息"));
+        fragments.add(new ParentTabFragment("朋友圈"));
+        fragments.add(new ParentTabFragment("公众号"));
     }
 
     private void initView() {
+
         //tab可滚动
-        parentTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        parentTabLayout.setTabMode(TabLayout.MODE_FIXED);
         //tab居中显示
         parentTabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
         tabAdapter = new ParentTabAdapter(getSupportFragmentManager(), fragments);
         parentViewPager.setAdapter(tabAdapter);
         //关联ViewPager和TabLayout
         parentTabLayout.setupWithViewPager(parentViewPager);
-        parentTabLayout.addTab(parentTabLayout.newTab().setText("新消息"));
-        parentTabLayout.addTab(parentTabLayout.newTab().setText("朋友圈"));
-        parentTabLayout.addTab(parentTabLayout.newTab().setText("公众号"));
+        parentTabLayout.getTabAt(0).setText("新消息");
+        parentTabLayout.getTabAt(1).setText("朋友圈");
+        parentTabLayout.getTabAt(2).setText("公众号");
+//        parentTabLayout.addTab(parentTabLayout.newTab().setText("新消息"));
+//        parentTabLayout.addTab(parentTabLayout.newTab().setText("朋友圈"));
+//        parentTabLayout.addTab(parentTabLayout.newTab().setText("公众号"));
     }
 
     private void findId() {
