@@ -20,7 +20,7 @@ import java.util.List;
  * Created by XYSM on 2018/1/25.
  */
 
-public class ParentTabFragment extends Fragment {
+public class ParentTabFragment3 extends Fragment {
     private List<Fragment> fragments = new ArrayList<>();
     private ParentTabAdapter tabAdapter;
     private View inflate;
