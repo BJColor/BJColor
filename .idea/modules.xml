@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BJColor.iml" filepath="$PROJECT_DIR$/BJColor.iml" />
+      <module fileurl="file://D:\StudioProject\Tbjcolor\BJColor\BJColor.iml" filepath="D:\StudioProject\Tbjcolor\BJColor\BJColor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\StudioProject\Tbjcolor\BJColor\app\app.iml" filepath="D:\StudioProject\Tbjcolor\BJColor\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libhttp/libhttp.iml" filepath="$PROJECT_DIR$/libhttp/libhttp.iml" />
+      <module fileurl="file://D:\StudioProject\Tbjcolor\BJColor\libhttp\libhttp.iml" filepath="D:\StudioProject\Tbjcolor\BJColor\libhttp\libhttp.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,5 @@
 package com.example.xysm.bjcolor.fragment;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,7 +21,6 @@ import java.util.List;
  * Created by XYSM on 2018/1/25.
  */
 
-@SuppressLint("ValidFragment")
 public class ChildeTabFragment extends Fragment {
     private TabLayout parentTabLayout;
     private ViewPager parentViewPager;
@@ -30,11 +28,10 @@ public class ChildeTabFragment extends Fragment {
     private List<String> tabs = new ArrayList<>();
     private ParentTabAdapter tabAdapter;
     private View inflate;
-    private final int page;
+    private  int page;
 
-    public ChildeTabFragment(int i) {
-        page = i;
-    }
+
+
 
     @Nullable
     @Override

@@ -6,7 +6,7 @@ String appId = 'com.example.xysm.bjcolor';
 int vCode = 1;
 
 android {
-    compileSdkVersion targetSdk
+    compileSdkVersion 26
     defaultConfig {
         applicationId appId
         minSdkVersion minSdk
@@ -15,7 +15,6 @@ android {
         versionName "BJColor" + vCode
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     //签名的配置，debug ，release 这个可以随便取名字，只要对上号就行了singningConfigs.userkey,然后就是那几个签名的密码，在新建签名的时候有几个配置，对照一下就知道填啥了
     signingConfigs {
 //        debug {
@@ -33,7 +32,6 @@ android {
 //            keyAlias '李四'
 //        }
     }
-
 //配置版本文件
     buildTypes {
         debug {
@@ -58,7 +56,6 @@ android {
 
         }
     }
-
     // 自定义输出配置
     android.applicationVariants.all { variant ->
         variant.outputs.all {
@@ -66,7 +63,6 @@ android {
 //            outputFileName = "${variant.versionName}.apk"
         }
     }
-
     //构建多版本
     flavorDimensions "keep", "change"
     productFlavors {
@@ -106,6 +102,7 @@ android {
             versionName "two" + vCode
         }
     }
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
