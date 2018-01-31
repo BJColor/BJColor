@@ -1,22 +1,23 @@
-package com.example.xysm.bjcolor.adapter;
+package com.example.xysm.bjcolor.newOrder;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.util.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by XYSM on 2018/1/25.
  */
 
-public class ParentTabAdapter extends FragmentPagerAdapter {
+public class TabAdapter extends FragmentPagerAdapter {
 
 
     private  List<Pair<String, ? extends Fragment>> mFragmentList;
 
-    public ParentTabAdapter(FragmentManager fm, List<Pair<String, ? extends Fragment>> fragments) {
+    public TabAdapter(FragmentManager fm, List<Pair<String, ? extends Fragment>> fragments) {
         super(fm);
         mFragmentList = fragments;
     }
@@ -28,6 +29,6 @@ public class ParentTabAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return mFragmentList.size();
+          return mFragmentList.size();
     }
 }
