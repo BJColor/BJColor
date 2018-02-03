@@ -13,6 +13,12 @@ public class BasePresenter<T> {
     protected   T getView(){
         return mView;
     }
-
+    /**
+     * 在view销毁的时候调用
+     */
+    public void onDestory() {
+        /*Net.get().cancel(getIdentifier());*/
+        mView = null;
+    }
 
 }

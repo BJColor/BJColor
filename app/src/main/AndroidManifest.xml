@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xysm.bjcolor">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newOrder.OrderNewActivity">
+        <activity android:name=".wifi.WifiActivity">
+        <!--<activity android:name=".newOrder.OrderNewActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

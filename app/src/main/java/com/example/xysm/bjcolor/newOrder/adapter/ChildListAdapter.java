@@ -1,4 +1,4 @@
-package com.example.xysm.bjcolor.newOrder;
+package com.example.xysm.bjcolor.newOrder.adapter;
 
 import android.widget.TextView;
 

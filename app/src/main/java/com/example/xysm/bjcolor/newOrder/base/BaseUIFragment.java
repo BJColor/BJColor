@@ -1,4 +1,4 @@
-package com.example.xysm.bjcolor.newOrder;
+package com.example.xysm.bjcolor.newOrder.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

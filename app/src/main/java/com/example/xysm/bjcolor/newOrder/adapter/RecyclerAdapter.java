@@ -1,4 +1,4 @@
-package com.example.xysm.bjcolor.newOrder;
+package com.example.xysm.bjcolor.newOrder.adapter;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;

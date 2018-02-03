@@ -1,10 +1,12 @@
-package com.example.xysm.bjcolor.newOrder;
+package com.example.xysm.bjcolor.newOrder.other;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.util.Pair;
 import android.support.v4.view.ViewPager;
+
+import com.example.xysm.bjcolor.newOrder.adapter.TabAdapter2;
 
 import java.util.List;
 
