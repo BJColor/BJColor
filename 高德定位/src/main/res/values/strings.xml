@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Location</string>
+    <string name="amp_address"> 经度:%1$s &#160;&#160;&#160;&#160;&#160;&#160;\n
+        纬度:%2$s &#160;&#160;&#160;&#160;&#160;&#160;\n
+        地址:%3$s &#160;&#160;&#160;&#160;&#160;&#160;
+        </string>
+</resources>

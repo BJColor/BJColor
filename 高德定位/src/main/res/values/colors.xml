@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gold_text">#FFB937</color>
+    <color name="wifi_text">#929292</color>
+    <color name="wifi_error">#90000000</color>
+    <color name="gold_text1">#BF8734</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="translucent">#00000000</color>
+    <!--主要颜色-->
+    <color name="gold_new">#ffb847</color>
+    <color name="gold_new2">#f5c382</color>
+    <color name="error_code">#f43939</color>
+    <color name="heavy_gray">#757575</color>
+    <color name="light_gray">#c3c3c3</color>
+    <color name="line_color">#86888f</color>
+    <color name="transparent"> #9000</color >
+    <color name="text_color"> #666666</color >
+    <color name="notice_color"> #999999</color >
+    <color name="next_color"> #333333</color >
+
+    <color name="back">#333</color>
+
+    <color name="colorPageBg">#f2f4f5</color>
+    <!--item的水波纹颜色-->
+    <color name="itemBackground">#DD7D7D7D</color>
+    <!--item的5.0一下版本选择器颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+
+    <color name="white_text">#ffffff</color>
+    <color name="tran_text">#00000000</color>
+
+
+    <color name="divider">#a0a0a4</color>
+    <color name="wine">#ffb847</color><!--白色 -->
+    <color name="color_main_top">#F5C382</color>
+    <color name="apkversion">#EABA7C</color>
+    <!--象牙色 -->
+    <!--亮黄色 -->
+    <!--黄色 -->
+    <!--雪白色 -->
+    <!--花白色 -->
+    <!--柠檬绸色 -->
+    <!--米绸色 -->
+    <!--海贝色 -->
+    <!--淡紫红 -->
+    <!--番木色 -->
+    <!--白杏色 -->
+    <!--浅玫瑰色 -->
+    <!--桔黄色 -->
+    <!--鹿皮色 -->
+    <!--纳瓦白 -->
+    <!--桃色 -->
+    <color name="gold">#FFD700</color><!--金色 -->
+    <!--粉红色 -->
+    <!--亮粉红色 -->
+    <!--橙色 -->
+    <!--亮肉色 -->
+    <!--暗桔黄色 -->
+    <!--珊瑚色 -->
+    <!--热粉红色 -->
+    <!--西红柿色 -->
+    <!--红橙色 -->
+    <!--深粉红色 -->
+    <!--紫红色 -->
+    <!--红紫色 -->
+    <color name="red">#FF0000</color><!--红色 -->
+    <!--老花色 -->
+    <!--亮金黄色 -->
+    <!--亚麻色 -->
+    <color name="antiquewhite">#FAEBD7</color><!--古董白 -->
+    <!--鲜肉色 -->
+    <!--幽灵白 -->
+    <!--薄荷色 -->
+    <!--烟白色 -->
+    <!--蓝色 -->
+    <!--中兰色 -->
+    <!--暗蓝色 -->
+    <!--海军色 -->
+    <color name="color_common">#666666</color><!--大面积运用文字-->
+    <color name="black_333">#333333</color>
+    <color name="black_999">#999999</color>
+    <color name="color_trans">#00000000</color>
+    <!--背景色-->
+    <color name="color_light">#f2f2f2</color><!--浅色背景-->
+    <!--深色背景-->
+    <color name="color_d5d5d5">#d5d5d5</color><!--分割线颜色-->
+    <color name="color_orange">#ffb847</color>
+    <color name="color_6b6d74">#6b6d74</color>
+    <color name="cart_del_color">#fe3b31</color>
+
+
+    <!--字体颜色-->
+    <!--顶部导航栏-->
+    <!-- 子标题 -->
+    <!-- 文字红色 -->
+    <color name="text_color_red">#fd3b31</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="common_yellow">#ffb847</color>
+    <color name="settings_version_change">#333333</color>
+    <!--商城列表分类二级目录背景色-->
+    <color name="shop_kind_child_bg">#53525a</color>
+    <color name="pull_to_refresh_gray">#505050</color>
+
+    <color name="common_selected_yellow">#b2ffb847</color>
+    <color name="wine_item_name_bg">#b20f0f0f</color>
+    <color name="wine_manage_contnet_tv">#757575</color>
+    <color name="wine_manage_diver_color">#1fffffff</color>
+    <color name="wine_manage_list_divisive_color">#0effffff</color>
+
+    <color name="conmmon_color">#2A2A34</color>
+    <color name="good_detial_color">#333333</color>
+    <color name="wine_home_line_color">#E5E5E5</color>
+    <color name="wine_color">#C30240</color>
+    <color name="wine_home_pay">#DCBF91</color>
+    <color name="wine_goods_back">#DDC08E</color>
+    <color name="wine_color_price">#C30240</color>
+    <color name="wine_home_text">#353F54</color>
+    <color name="wine_managerment_bg">#3D3B4A</color>
+    <color name="color_B33D3B4A">#B33D3B4A</color>
+    <color name="wine_goods_text">#F2F2F2</color>
+    <color name="wine_management_select">#F5C382</color>
+    <color name="mian_color">#F5C382</color>
+    <color name="pay_color">#3D3B4A</color>
+    <color name="recipe_back_color">#292935</color>
+
+
+    <color name="gray">#cccccc</color>
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#9C27B0</color>
+
+    <color name="black_common">#000000</color>
+    <color name="black858585">#858585</color>
+
+    <!-- 编辑框背景色-->
+    <color name="color_e1e1e1">#E1E1E1</color>
+    <color name="color_979797">#979797</color>
+
+    <color name="color_32313E">#32313E</color>
+
+</resources>

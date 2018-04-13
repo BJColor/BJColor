@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_amp_address"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/amp_address" />
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_addressactivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/mMapView"
+                android:layout_width="350dp"
+                android:layout_height="380dp"
+                ></com.amap.api.maps.MapView>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="200px"
+                    android:layout_height="50px"
+                    android:background="@drawable/amp_address_btn_cancel"
+                    android:text="取消"
+                    android:textColor="@drawable/amp_address_btn_color"
+                    android:textSize="26px" />
+
+                <Button
+                    android:id="@+id/btnok"
+                    android:layout_width="200px"
+                    android:layout_height="50px"
+                    android:layout_marginLeft="130dp"
+                    android:background="@drawable/amp_address_btn"
+                    android:text="确定"
+                    android:textColor="@drawable/amp_address_btn_color"
+                    android:textSize="26px" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

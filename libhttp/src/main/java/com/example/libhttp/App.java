@@ -2,9 +2,6 @@ package com.example.libhttp;
 
 import android.app.Application;
 
-/**
- * Created by XYSM on 2018/1/19.
- */
 
 public class App {
     private static Application sInstance;

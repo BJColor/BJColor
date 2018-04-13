@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Obser和Service使用(时间计时)" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libhttp" />
+            <option value="$PROJECT_DIR$/高德定位" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

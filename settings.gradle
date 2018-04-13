@@ -1,1 +1,1 @@
-include ':app', ':libhttp'
+include ':app', ':libhttp', ':高德定位', ':Obser和Service使用(时间计时)'
