@@ -1,51 +1,69 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
 
-int minSdk = 15;
-int targetSdk = 27;
-String appId = 'com.example.xysm.bjcolor';
-int vCode = 1;
+
+int minSdk = var.minSdkVersion
+int targetSdk = var.targetSdkVersion
+String appId = var.applicationId
+int vCode = 1
+def nation_num = '0000'
+def community_num = '0001'
+
 android {
-    compileSdkVersion 27
+
+    compileSdkVersion targetSdk
+    buildToolsVersion var.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    //DSL element 'DexOptions.incremental' is obsolete and will be removed at the end of 2018
+//    dexOptions {
+//        incremental true
+//        javaMaxHeapSize "4g"
+//    }
+    lintOptions {
+        // true--错误发生后停止gradle构建
+        abortOnError false
+        //  true--所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题将停止构建
+        checkReleaseBuilds false
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+
     defaultConfig {
         applicationId appId
         minSdkVersion minSdk
         targetSdkVersion targetSdk
         versionCode vCode
-        versionName "BJColor" + vCode
+        versionName "jiuzhidao"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+
+        multiDexEnabled true
+        renderscriptTargetApi minSdk
+        renderscriptSupportModeEnabled true
     }
-    //签名的配置，debug ，release 这个可以随便取名字，只要对上号就行了singningConfigs.userkey,然后就是那几个签名的密码，在新建签名的时候有几个配置，对照一下就知道填啥了
+
     signingConfigs {
-//        debug {
-//            keyPassword 'zhangsan12345678'
-//            storeFile file(getProjectDir().getParent() + '/key_store/platform.keystore')
-////签名文件放在你的电脑哪里
-//            storePassword 'zhangsan12345678'
-//            keyAlias 'zhansan'
-//        }
-//
-//        release {
-//            keyPassword 'lisi12345678'
-//            storeFile file("C:/Users/zhangxiaoya/Desktop/demo.jks")
-//            storePassword 'lisi12345678'
-//            keyAlias '李四'
-//        }
-    }
-//配置版本文件
-    buildTypes {
         debug {
-            //是否启用混淆
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //是否清理无用资源（将删除所有那些在项目中不会使用的资源）
-//            shrinkResources true
-            //是否启用zipAlign压缩
-            zipAlignEnabled true
-            signingConfig signingConfigs.debug
+            storeFile file("../firebox_keystore.jks")
+            keyAlias 'haier'
+            keyPassword 'android'
+            storePassword 'android'
         }
+
+    }
+
+
+    buildTypes {
+
         release {
             //是否启用混淆
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //是否清理无用资源（将删除所有那些在项目中不会使用的资源）
 //            shrinkResources true
@@ -55,13 +73,11 @@ android {
 
         }
     }
-    // 自定义输出配置
-    android.applicationVariants.all { variant ->
-        variant.outputs.all {
-            outputFileName = "${variant.name}-${variant.versionName}.apk"
-//            outputFileName = "${variant.versionName}.apk"
-        }
-    }
+
+    def stValueT = ".ceshi"
+    def stValueX = ".xianshang"
+    def stValueY = ".yushengchan"
+
     //构建多版本
     flavorDimensions "keep", "change"
     productFlavors {
@@ -72,13 +88,17 @@ android {
             applicationId appId
             targetSdkVersion targetSdk
             versionCode vCode
+
             ndk {
-                moduleName "native-powerctl-jni"
-                abiFilters "armeabi-v7a", "x86"
+                moduleName "native-modbus-jni,libxmediaplayer"
+                ldLibs "log", "z", "m", "android", "c"
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+
                 // 指定要ndk需要兼容的架构(这样其他依赖包里mips,armeabi,arm-v8之类的so会被过滤掉)
             }
             sourceSets.main {
                 jni.srcDirs = []
+                jniLibs.srcDirs = ['libs']
                 jniLibs.srcDir 'src/main/libs'
             }
             // Enabling multidex support.
@@ -88,29 +108,79 @@ android {
         }
 
 
-        One {
+        BXN_NATION {
             dimension "change"
-            applicationId "com.example.xysm.bjcolor"
-            resValue "string", "app_name", "app"
-            versionName "one" + vCode
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXN_NATION_" + vCode + "_" + nation_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.NationFactory", ST_DATA_VALUE: stValueX]
         }
-        Two {
+        BXNT_NATION {
             dimension "change"
-            applicationId "com.example.xysm.bjcolor2"
-            resValue "string", "app_name", "app_us"
-            versionName "two" + vCode
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXNT_NATION_" + vCode + "_" + nation_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.NationFactory", ST_DATA_VALUE: stValueT]
+        }
+        BXNY_NATION {
+            dimension "change"
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXNY_NATION_" + vCode + "_" + nation_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.NationFactory", ST_DATA_VALUE: stValueY]
+        }
+
+
+        BXN_COMMINITY {
+            dimension "change"
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXN_COMMINITY_" + vCode + "_" + community_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.CommunityFactory", ST_DATA_VALUE: stValueX]
+        }
+        BXNT_COMMINITY {
+            dimension "change"
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXNT_COMMINITY_" + vCode + "_" + community_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.CommunityFactory", ST_DATA_VALUE: stValueT]
+        }
+        BXNY_COMMINITY {
+            dimension "change"
+            applicationId appId
+            resValue "string", "app_name", var.appname
+            versionName "BXNY_COMMINITY_" + vCode + "_" + community_num
+            manifestPlaceholders = [INDEX_CONFIG_VALUE: ".activity.index.factorys.CommunityFactory", ST_DATA_VALUE: stValueY]
+        }
+    }//    // 自定义输出配置
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            //这个修改输出的APK路径
+            if (variant.buildType.name != "debug") {//防止AS无法安装debug包(apk)
+                variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/apk")
+            }
+            outputFileName = "${variant.versionName}.apk"
         }
     }
-    buildToolsVersion '26.0.2'
+
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$var.supportLibraryVersion"
+    implementation "com.android.support:design:$var.supportLibraryVersion"
+    implementation "com.android.support:support-vector-drawable:$var.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$var.supportLibraryVersion"
+    implementation "com.android.support:design:$var.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$var.supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'junit:junit:4.12'
-    implementation 'com.android.support.test:runner:1.0.1'
-    implementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':libhttp')
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
@@ -119,10 +189,6 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.0'
     compile 'org.jsoup:jsoup:1.9.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.android.support:design:27.1.1'
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'com.android.support:recyclerview-v7:27.1.1'
-    compile 'com.android.support:design:27.1.1'
-    compile 'com.android.support:cardview-v7:27.1.1'
+
 }
 

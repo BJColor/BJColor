@@ -25,6 +25,13 @@
             </intent-filter>
         </activity>
         <!--<activity android:name=".OrderNewActivity"></activity>-->
+
+        <meta-data
+            android:name="ST_DATA"
+            android:value="${ST_DATA_VALUE}" />
+        <meta-data
+            android:name="INDEX_CONFIG"
+            android:value="${INDEX_CONFIG_VALUE}" />
     </application>
 
 </manifest>

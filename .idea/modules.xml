@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/BJColor.iml" filepath="$PROJECT_DIR$/BJColor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Obser和Service使用(时间计时)/Obser和Service使用(时间计时).iml" filepath="$PROJECT_DIR$/Obser和Service使用(时间计时)/Obser和Service使用(时间计时).iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bjcolorlib/bjcolorlib.iml" filepath="$PROJECT_DIR$/bjcolorlib/bjcolorlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/libhttp/libhttp.iml" filepath="$PROJECT_DIR$/libhttp/libhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/测试retrifit/测试retrifit.iml" filepath="$PROJECT_DIR$/测试retrifit/测试retrifit.iml" />
       <module fileurl="file://$PROJECT_DIR$/高德定位/高德定位.iml" filepath="$PROJECT_DIR$/高德定位/高德定位.iml" />
     </modules>
   </component>
