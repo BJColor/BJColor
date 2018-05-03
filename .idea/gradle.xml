@@ -12,6 +12,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bjcolorlib" />
             <option value="$PROJECT_DIR$/libhttp" />
+            <option value="$PROJECT_DIR$/md_demo" />
+            <option value="$PROJECT_DIR$/zxing" />
+            <option value="$PROJECT_DIR$/动态设置selector" />
+            <option value="$PROJECT_DIR$/数据存储" />
             <option value="$PROJECT_DIR$/测试retrifit" />
             <option value="$PROJECT_DIR$/高德定位" />
           </set>

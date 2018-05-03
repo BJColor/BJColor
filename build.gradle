@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
-        
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,6 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -29,7 +30,7 @@ task clean(type: Delete) {
 
 ext {
     var = [
-            applicationId  :"om.example.xysm.bjcolor",
+            applicationId  :"com.example.xysm.bjcolor",
             appname: "酒知道APP",
             // SDK And Tools
             minSdkVersion        : 19,
@@ -42,3 +43,11 @@ ext {
     ]
 
 }
+
+//  库之间引用 文件位置关系  不然引用失败
+//repositories {
+//    flatDir {
+//        dirs '../../libs/' //this way we can find the .aar file in libs folder
+////        dirs 'libs/' //this way we can find the .aar file in libs folder
+//    }
+//}

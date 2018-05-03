@@ -182,13 +182,13 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'junit:junit:4.12'
     implementation project(':libhttp')
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
     // RxJava
-    compile 'io.reactivex:rxjava:1.1.5'
-    compile 'io.reactivex:rxandroid:1.2.0'
-    compile 'org.jsoup:jsoup:1.9.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'io.reactivex:rxjava:1.1.5'
+    implementation 'io.reactivex:rxandroid:1.2.0'
+    implementation 'org.jsoup:jsoup:1.9.2'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
 
 }
 

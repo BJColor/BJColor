@@ -1,1 +1,1 @@
-include ':app', ':libhttp', ':高德定位', ':Obser和Service使用(时间计时)',  ':bjcolorlib', ':测试retrifit'
+include ':app', ':libhttp', ':高德定位', ':Obser和Service使用(时间计时)',  ':bjcolorlib', ':测试retrifit', ':动态设置selector', ':md_demo',':zxing', ':数据存储'

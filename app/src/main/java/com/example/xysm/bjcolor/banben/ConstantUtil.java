@@ -15,7 +15,7 @@ package com.example.xysm.bjcolor.banben;
 public class ConstantUtil {
 
 
-    public static final VersionInfo VERSION_INFO = VersionConfig.versionInfoConfig;
+//    public static final VersionInfo VERSION_INFO = VersionConfig.versionInfoConfig;
 
     public static boolean NOT_4_4 = true; //配置是否为有串口版
 
