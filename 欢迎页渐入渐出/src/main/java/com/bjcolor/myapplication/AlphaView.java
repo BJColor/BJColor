@@ -55,12 +55,6 @@ public class AlphaView extends RelativeLayout implements ViewPager.OnPageChangeL
         setAttributeSet(context, attrs);
     }
 
-    public AlphaView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context);
-        setAttributeSet(context, attrs);
-    }
-
     private void setAttributeSet(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AlphaView);
         int mVis = typedArray.getInt(R.styleable.AlphaView_pointvisbile, VISIBLE);
