@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AlphaView">
+        <attr name="pointvisbile">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="8" />
+        </attr>
+
+        <attr name="pointgravity">
+            <enum name="left" value="8" />
+            <enum name="right" value="5" />
+            <enum name="center" value="17" />
+            <enum name="center_horizontal" value="1" />
+            <enum name="center_vertical" value="16" />
+        </attr>
+    </declare-styleable>
+</resources>

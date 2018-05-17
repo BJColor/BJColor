@@ -8,9 +8,12 @@
       <module fileurl="file://$PROJECT_DIR$/bjcolorlib/bjcolorlib.iml" filepath="$PROJECT_DIR$/bjcolorlib/bjcolorlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/libhttp/libhttp.iml" filepath="$PROJECT_DIR$/libhttp/libhttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/md_demo/md_demo.iml" filepath="$PROJECT_DIR$/md_demo/md_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication2/myapplication2.iml" filepath="$PROJECT_DIR$/myapplication2/myapplication2.iml" />
       <module fileurl="file://$PROJECT_DIR$/zxing/zxing.iml" filepath="$PROJECT_DIR$/zxing/zxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/动态设置selector/动态设置selector.iml" filepath="$PROJECT_DIR$/动态设置selector/动态设置selector.iml" />
       <module fileurl="file://$PROJECT_DIR$/数据存储/数据存储.iml" filepath="$PROJECT_DIR$/数据存储/数据存储.iml" />
+      <module fileurl="file://$PROJECT_DIR$/欢迎页渐入渐出/欢迎页渐入渐出.iml" filepath="$PROJECT_DIR$/欢迎页渐入渐出/欢迎页渐入渐出.iml" />
       <module fileurl="file://$PROJECT_DIR$/测试retrifit/测试retrifit.iml" filepath="$PROJECT_DIR$/测试retrifit/测试retrifit.iml" />
       <module fileurl="file://$PROJECT_DIR$/高德定位/高德定位.iml" filepath="$PROJECT_DIR$/高德定位/高德定位.iml" />
     </modules>
