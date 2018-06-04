@@ -3,6 +3,7 @@ package com.bjcolor.myapplication;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -24,8 +25,9 @@ public class SplshActivity extends Activity implements View.OnClickListener {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         setContentView(R.layout.activity_splash_index);
         AlphaView alphaview = findViewById(R.id.alphaview);
-        alphaview.setImages(strings);
-        alphaview.setLayouts(Layouts);
+        alphaview.setPointGravity(Gravity.RIGHT);
+        alphaview.setData(strings, Layouts);
+        alphaview.setPoint(R.mipmap.new_press_dian, R.mipmap.new_normal_dian, 50, 50, 30, 40, 30, 1);
         alphaview.setSplashItemOnClick(this, R.layout.splash_activity_lay4, R.id.login, R.id.regist);
 
     }
